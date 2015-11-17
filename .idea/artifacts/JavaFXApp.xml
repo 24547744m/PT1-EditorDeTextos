@@ -8,7 +8,7 @@
     </properties>
     <root id="root">
       <element id="archive" name="JavaFXApp.jar">
-        <element id="module-output" name="PT1-EditorDeTextosxd" />
+        <element id="module-output" name="PT1-EditorDeTextos" />
       </element>
     </root>
   </artifact>
