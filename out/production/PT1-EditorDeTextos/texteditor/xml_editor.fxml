@@ -14,20 +14,19 @@
         <menus>
           <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
             <items>
-              <MenuItem fx:id="openFileMenu" mnemonicParsing="false" onAction="#openFileAction" text="Open" />
-                  <MenuItem fx:id="closeFileMenu" mnemonicParsing="false" text="Close" />
-                  <MenuItem fx:id="saveFileMenu" mnemonicParsing="false" onAction="#saveFileAction" text="Save" />
-                  <MenuItem fx:id="saveAsFileMenu" mnemonicParsing="false" onAction="#saveAsFileAction" text="Save As" />
+              <MenuItem fx:id="openFileMenu" mnemonicParsing="false" onAction="#openFileAction" text="Open                Ctrl+O" />
+                  <MenuItem fx:id="saveFileMenu" mnemonicParsing="false" onAction="#saveFileAction" text="Save                 Ctrl+S" />
+                  <MenuItem fx:id="saveAsFileMenu" mnemonicParsing="false" onAction="#saveAsFileAction" text="Save As            Ctrl+Shift+S" />
                   <MenuItem fx:id="exitFileMenu" mnemonicParsing="false" onAction="#exitAction" text="Exit" />
             </items>
           </Menu>
           <Menu fx:id="editMenu" mnemonicParsing="false" text="Edit">
             <items>
-              <MenuItem fx:id="copyEditMenu" mnemonicParsing="false" text="Copy" />
-                  <MenuItem fx:id="cutEditMenu" mnemonicParsing="false" text="Cut" />
-                  <MenuItem fx:id="pasteEditMenu" mnemonicParsing="false" text="Paste" />
-                  <MenuItem fx:id="undoEditMenu" mnemonicParsing="false" text="Undo" />
-                  <MenuItem fx:id="redoEditMenu" mnemonicParsing="false" text="Redo" />
+              <MenuItem fx:id="copyEditMenu" mnemonicParsing="false" text="Copy      Ctrl+C" />
+                  <MenuItem fx:id="cutEditMenu" mnemonicParsing="false" text="Cut         Ctrl+X" />
+                  <MenuItem fx:id="pasteEditMenu" mnemonicParsing="false" text="Paste      Ctrl+V" />
+                  <MenuItem fx:id="undoEditMenu" mnemonicParsing="false" text="Undo     Ctrl+Z" />
+                  <MenuItem fx:id="redoEditMenu" mnemonicParsing="false" text="Redo      Ctrl+Y" />
             </items>
           </Menu>
           <Menu fx:id="optionsMenu" mnemonicParsing="false" text="Options">
