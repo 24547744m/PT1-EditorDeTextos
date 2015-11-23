@@ -14,29 +14,40 @@
         <menus>
           <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
             <items>
-              <MenuItem fx:id="openFileMenu" mnemonicParsing="false" onAction="#openFileAction" text="Open                Ctrl+O" />
-                  <MenuItem fx:id="saveFileMenu" mnemonicParsing="false" onAction="#saveFileAction" text="Save                 Ctrl+S" />
-                  <MenuItem fx:id="saveAsFileMenu" mnemonicParsing="false" onAction="#saveAsFileAction" text="Save As            Ctrl+Shift+S" />
+              <MenuItem fx:id="openFileMenu" mnemonicParsing="false" onAction="#openFileAction" text="Open    " />
+                  <MenuItem fx:id="saveFileMenu" mnemonicParsing="false" onAction="#saveFileAction" text="Save    " />
+                  <MenuItem fx:id="saveAsFileMenu" mnemonicParsing="false" onAction="#saveAsFileAction" text="Save As " />
                   <MenuItem fx:id="exitFileMenu" mnemonicParsing="false" onAction="#exitAction" text="Exit" />
             </items>
           </Menu>
-          <Menu fx:id="editMenu" mnemonicParsing="false" text="Edit">
+          <Menu fx:id="editMenu" mnemonicParsing="false" onShowing="#enableDisableItems" text="Edit">
             <items>
-              <MenuItem fx:id="copyEditMenu" mnemonicParsing="false" text="Copy      Ctrl+C" />
-                  <MenuItem fx:id="cutEditMenu" mnemonicParsing="false" text="Cut         Ctrl+X" />
-                  <MenuItem fx:id="pasteEditMenu" mnemonicParsing="false" text="Paste      Ctrl+V" />
-                  <MenuItem fx:id="undoEditMenu" mnemonicParsing="false" text="Undo     Ctrl+Z" />
-                  <MenuItem fx:id="redoEditMenu" mnemonicParsing="false" text="Redo      Ctrl+Y" />
+              <MenuItem fx:id="copyEditMenu" mnemonicParsing="false" onAction="#copyTextAction" text="Copy      Ctrl+C" />
+                  <MenuItem fx:id="cutEditMenu" mnemonicParsing="false" onAction="#cutTextAction" text="Cut         Ctrl+X" />
+                  <MenuItem fx:id="pasteEditMenu" mnemonicParsing="false" onAction="#pasteTextAction" text="Paste      Ctrl+V" />
+                  <MenuItem fx:id="undoEditMenu" mnemonicParsing="false" onAction="#undoTextAction" text="Undo     Ctrl+Z" />
+                  <MenuItem fx:id="redoEditMenu" mnemonicParsing="false" onAction="#redoTextAction" text="Redo      Ctrl+Shift+Z" />
             </items>
           </Menu>
           <Menu fx:id="optionsMenu" mnemonicParsing="false" text="Options">
             <items>
-              <MenuItem fx:id="fontOptionsMenu" mnemonicParsing="false" text="Font" />
+                  <Menu mnemonicParsing="false" text="Font Family">
+                     <items>
+                        <CheckMenuItem fx:id="sansFontFamily" mnemonicParsing="false" onAction="#fontFamilyAction" text="SansSerif" />
+                        <CheckMenuItem fx:id="freeFontFamily" mnemonicParsing="false" onAction="#fontFamilyAction" text="FreeMono" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Font Size">
+                     <items>
+                        <CheckMenuItem fx:id="twelveFontSize" mnemonicParsing="false" onAction="#fontSizeAction" text="12" />
+                        <CheckMenuItem fx:id="fourteenFontSize" mnemonicParsing="false" onAction="#fontSizeAction" text="14" />
+                     </items>
+                  </Menu>
             </items>
           </Menu>
             <Menu fx:id="helpMenu" mnemonicParsing="false" text="Help">
                <items>
-                  <MenuItem fx:id="aboutHelpMenu" mnemonicParsing="false" text="About" />
+                  <MenuItem fx:id="aboutHelpMenu" mnemonicParsing="false" onAction="#aboutHelpAction" text="About" />
                </items>
             </Menu>
         </menus>
@@ -50,9 +61,9 @@
           <contextMenu>
               <ContextMenu>
                   <items>
-                      <MenuItem fx:id="copyTextArea" text="Copy" />
-                      <MenuItem fx:id="cutTextArea" text="Cut" />
-                      <MenuItem fx:id="pasteTextArea" text="Paste" />
+                      <MenuItem fx:id="copyTextArea" onAction="#copyTextAction" text="Copy" />
+                      <MenuItem fx:id="cutTextArea" onAction="#cutTextAction" text="Cut" />
+                      <MenuItem fx:id="pasteTextArea" onAction="#pasteTextAction" text="Paste" />
                   </items>
               </ContextMenu>
           </contextMenu>
