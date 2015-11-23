@@ -177,7 +177,9 @@ public class Controller {
 
 
 
-
+    /**
+     * Configuracion personalizada para FileChooser
+     * */
     private void configureFileChooser(FileChooser fileChooser, String msj) {
         fileChooser.setTitle(msj);
 
